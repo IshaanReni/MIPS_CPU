@@ -171,10 +171,16 @@ def assembly_to_hex(asm_dir, hex_dir):
             j_addr = to_bin(0, 26)
 
             #3 reg instructions
-            if i_line[0].upper() in ['AND', 'ADDU', 'OR', 'XOR', 'SUBU','SLT','SLTU', 'SLLV', 'SRAV', 'SRLV']:
+            if i_line[0].upper() in ['AND', 'ADDU', 'OR', 'XOR', 'SUBU','SLT','SLTU']:
                 rd = to_bin(i_line[1],5)
                 rs = to_bin(i_line[2],5)
                 rt = to_bin(i_line[3],5)
+            #3 reg shift
+            if i_line[0].upper() in ['SLLV', 'SRAV', 'SRLV']:
+                rd = to_bin(i_line[1],5)
+                rt = to_bin(i_line[2],5)
+                rs = to_bin(i_line[3],5)
+
             #2 reg instructions (rs, rt, with a possible immediate value)
             elif i_line[0].upper() in ['ADDIU', 'ANDI', 'ORI', 'SLTI', 'SLTIU', 'XORI', 'MULT', 'MULTU', 'DIV', 'DIVU']:
                 rt = to_bin(i_line[1],5)
