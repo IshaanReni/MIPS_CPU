@@ -5,6 +5,7 @@
 \usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
 \usepackage{amsmath}
+\usepackage[section]{placeins}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
@@ -20,16 +21,12 @@
 \begin{document}
 \maketitle
 
-\section{CPU Architecture}
-
-\subsection{A Diagram of our CPU Architecture}
+\section{CPU Architecture Overview}
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.5\textwidth]{top-level.jpg}
+\includegraphics[width=0.7\textwidth]{top-level.jpg}
 \end{figure}
-
-\subsection{Architecture Overview}
 
 \begin{tabular}[htp]{ |p{3cm}|p{8cm}|}
 \hline
@@ -65,23 +62,22 @@ Register File & This block contains all 32 MIPS registers, and has the ability t
 
 \subsection{Specification}
 
-\subsubsection{CPU Interface:} This CPU uses a memory bus-based interface, to be compatible with industrial IP blocks. Instructions and data are fetched over the same interface, and the memory has variable latency.
-\subsubsection{Avalon compatible RAM:} The CPU has an Avalon compatible memory-mapped interface. The CPU is independent of the memory itself. 
-\subsubsection{Avalon Protocol:} Avalon is a clock synchronous protocol, so 'waitrequest' indicates a stall cycle, and 'readdata' is available after the read request cycle.
-\subsubsection{Functionality VS. Performance:} This CPU has a focus primarily on functionality.
-\subsubsection{Reset Behaviour:} This CPU will not initiate any memory transactions while the reset signal is high, as the memory may also be resetting. 
-\subsubsection{Halt Behaviour:} This CPU is able to halt when the active signal is held at high. 
+\subsubsection{CPU Interface:} This CPU adheres to the Avalon(R) specification, a memory bus-based interface, in order to be compatible with industrial IP blocks. Instructions and data are fetched over the same interface, and the memory has variable latency. This means that the CPU must be able to stall and wait for data transfer when it is not available - this was done with the help of CPU stalls from the state machine and Control Unit.
+\subsubsection{Reset Behaviour:} When high, the CPU is to set all registers to 0, including the PC - this means that the CPU will halt immediately during a reset, however this causes the PC to take on the value of the reset vector, allowing it to continue execution as usual.
+\subsubsection{Halt Behaviour:} When the CPU detects an attempt to execute an instruction at address 0, the CPU will halt - this is a special state where the 'active' flag of the CPU is low, thus showing that it has completed execution. In this state, register\_v0 is outputted on the bus to allow easy testing. This behaviour is exploited in our test-cases; all instructions end on a 'jr \$0' instruction, which will cause the PC to become 0 and therefore halt.
 
-\subsection{Features and Advantages}
+\subsection{Design Decisions}
+In order to avoid complications, we decided to break down the CPU into several different units, and produce a CPU with several different files and connections, each file specialised for particular purpose.
+Each block was tested separately, to ensure they worked, before recombining them. These different blocks are outlined above in the CPU Architecture Overview section.
 
-\subsubsection{Timing Complications}
-In order to avoid complications due to the precise timings of the CPU, we decided to break down the CPU into several different units. 
+\subsubsection{Bus vs Harvard}
+We decided to develop a bus interface over a Harvard interface from the beginning, as we were all familiar with this particular architecture and converting a Harvard architecture to a bus-based one would require more effort.
+
 \subsubsection{Control Unit}
-To avoid the issue of coordinating timings between all the blocks, we decided to offload this task to the Control Unit, which sends signals to each block when the currently-executing instruction requires it. 
-\subsubsection{Block Operation}
-Each block does not need to consider timings or which cycle the CPU is in, but will simply operate when and if it receives the necessary data. The separate blocks are listed in the architecture overview. 
+To avoid the issue of coordinating timings between all the blocks, we decided to offload this task to the Control Unit, which sends signals to each block when the currently-executing instruction requires it - this also has the effect of preventing conflicts with other blocks such as when trying to request data from a register file. This means that each block had special inputs and outputs which had to be taken into consideration when designing the Control Unit.
+
 \subsubsection{Standard Execution Cycle}
-We decided to implement the standard 3-cycle execution cycle per instruction, FETCH, EXEC1 and EXEC2, with the ability to stall each of these states and a halt state. This 3-stage execution is only possible if all the arithmetic instructions could be done in a single cycle, which we found they were.
+To make the design process more familiar to us, we decided to use the standard 3-cycle execution cycle per instruction, FETCH, EXEC1 and EXEC2, with the ability to stall each of these states and a halt state. This 3-stage execution is only possible if all the arithmetic instructions could be done in a single cycle, which we determined to be true.
 
 \section{Testing the CPU}
 
@@ -91,12 +87,12 @@ The process of testing and subsequent design improvement was a core part of our 
 
 \subsection{Stage 1}
 
-After each block of the CPU was initially developed, a corresponding Verilog test bench would be created alongside it to confirm that the individual blocks are implemented correctly. This step is carried out so that simple errors are dealt with early in the design process, and don’t need to be dealt with later once the whole CPU is tested. Furthermore, each test bench and module were written by different members of the team to ensure that mistakes weren’t carried over between them. The whole CPU is then compiled together. A further Verilog test bench must be used to test if the inputs and outputs are correct and evaluate whether it is ready to be fully tested in stage 2.
+After each block of the CPU was initially developed, a corresponding Verilog test bench was created alongside it to confirm that the individual blocks were implemented correctly. This step was carried out so that simple errors were dealt with early in the design process, and did’t need to be dealt with later once the whole CPU is tested. The whole CPU is then compiled together. An additional Verilog test bench must be used to test if the inputs and outputs are correct and evaluate whether it is ready to be fully tested in stage 2.
 
 
 \subsection{Stage 2}
 
-The instruction testing stage aims to test the whole CPU’s effectiveness in executing each instruction from the MIPS instruction set. Test cases for each instruction were manually written in assembly language by team members and converted by a MIPS assembler into machine code. The CPU is compiled with the test cases loaded into its RAM. The simulated CPU output is then compared with a reference output to check if the instruction was executed correctly. If tests fail, adequate adjustments are made to the implementation as a debugging step and this complete testing process is recursively repeated for every test case. 
+The instruction testing stage aims to test the effectiveness of the whole CPU in executing each instruction from the MIPS instruction set. Test cases for each instruction were manually written in assembly language and converted by a MIPS assembler into machine code. The CPU is compiled with the test cases loaded into its RAM. The simulated CPU output is then compared with a reference output to check if the instruction was executed correctly. If tests fail, adequate adjustments are made to the implementation as a debugging step and this complete testing process is recursively repeated for every test case. 
 
 \subsection{Test cases}
 Test cases are split into 4 stages of testing which will be carried out in a specific order. This is important for debugging as it helps to highlight which specific blocks may be liable for errors since similar instructions will rely on the same CPU blocks. Any errors in the earlier stage instructions are likely to lead to errors in latter stage testing so it is important to follow a structured order such as this. 
@@ -107,18 +103,19 @@ Test cases are split into 4 stages of testing which will be carried out in a spe
 Fundamental instructions, these are core to testing the other instructions which may be dependent on them and hence they are tested first.
 
 \subsubsection{1 – Arithmetic Testing:}
-Arithmetic instructions which all use the ALU. Most of the remaining testcases are heavily dependent on some of these instructions (mainly ADDIU and ADDU) in their testing and will require them to function.
+Arithmetic instructions which use the ALU. Most of the remaining testcases are heavily dependent on some of these instructions (mainly ADDIU and ADDU) in their testing and require them to function.
 
 \subsubsection{2 – Conditionals:}
 Conditional or branch instructions are tested next as they are reliant on the arithmetic instructions to produce the required conditions.
 
 \subsubsection{3 – Other Test Cases:}
 Finally, the remaining test cases should be tested to make sure every instruction is working. These may be slightly more complex or are dependent on previously tested instructions.
-
+\hfill \break
+\hfill \break
 
 \subsection{Test Flow Diagram}
 
-\begin{figure} [htp!]
+\begin{figure} [!htb]
     \centering
     \subfloat[\centering Stage 1 Testing ]{{\includegraphics[width=3.5
 cm]{testing1.png} }}%
