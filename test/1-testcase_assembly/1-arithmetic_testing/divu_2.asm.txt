@@ -1,5 +1,5 @@
-addiu $2, $2, -8
-addiu $11, $11, 4
-divu $2, $11
-mflo $4
+addiu $4, $4, -8
+addiu $5, $5, 4
+divu $4, $5
 jr $0
+mflo $2
