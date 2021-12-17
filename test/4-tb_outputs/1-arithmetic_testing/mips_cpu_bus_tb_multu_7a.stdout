@@ -12,7 +12,7 @@ RAM : INIT : RAM contents at 00004e29 are: 03
 RAM : INIT : RAM contents at 00004e2a are: 28
 RAM : INIT : RAM contents at 00004e2b are: 42
 RAM : INIT : RAM contents at 00004e2c are: 00
-RAM : INIT : RAM contents at 00004e2d are: a3
+RAM : INIT : RAM contents at 00004e2d are: 65
 RAM : INIT : RAM contents at 00004e2e are: 00
 RAM : INIT : RAM contents at 00004e2f are: 18
 RAM : INIT : RAM contents at 00004e30 are: 00
@@ -184,19 +184,19 @@ CTRL: Here is the result = 2147483647
 CTRL: Read instruction at RAM address: bfc0000c
 PC: not reset or halt
 FSM: EXEC1
-CTRL: RAM INFO DATA READ: 1800a300
-CTRL : instruction word: 00a30018, opcode: 000000, funccode: 011000
+CTRL: RAM INFO DATA READ: 18006500
+CTRL : instruction word: 00650018, opcode: 000000, funccode: 011000
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: RAM INFO DATA READ: 1800a300
-CTRL : instruction word: 00a30018, opcode: 000000, funccode: 011000
+CTRL: RAM INFO DATA READ: 18006500
+CTRL : instruction word: 00650018, opcode: 000000, funccode: 011000
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
 FSM: EXEC2
 PC: not reset or halt
-CTRL: Instruction again: 00000000101000110000000000011000, FUNCCODE: 011000
+CTRL: Instruction again: 00000000011001010000000000011000, FUNCCODE: 011000
 CTRL: Here is the result = 4294967295
-CTRL: Instruction again: 00000000101000110000000000011000, FUNCCODE: 011000
+CTRL: Instruction again: 00000000011001010000000000011000, FUNCCODE: 011000
 CTRL: Here is the result = 4294967295
 PC: not reset or halt
 PC: current value before increment: bfc0000c
@@ -227,7 +227,7 @@ Detect JR in EXEC 1, Rs:  0
 PC: not reset or halt
 FSM: EXEC2
 CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
-Arrived at jr: 7fffffff, Rs:  0
+Arrived at jr: ffffffff, Rs:  0
 CTRL: Here is the result =          0
 CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
 Arrived at jr: 00000000, Rs:  0

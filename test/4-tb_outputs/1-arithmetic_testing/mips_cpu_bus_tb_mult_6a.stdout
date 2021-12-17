@@ -16,7 +16,7 @@ RAM : INIT : RAM contents at 00004e2d are: 03
 RAM : INIT : RAM contents at 00004e2e are: 1c
 RAM : INIT : RAM contents at 00004e2f are: 00
 RAM : INIT : RAM contents at 00004e30 are: 00
-RAM : INIT : RAM contents at 00004e31 are: 83
+RAM : INIT : RAM contents at 00004e31 are: 64
 RAM : INIT : RAM contents at 00004e32 are: 00
 RAM : INIT : RAM contents at 00004e33 are: 18
 RAM : INIT : RAM contents at 00004e34 are: 00
@@ -233,27 +233,27 @@ CTRL: Here is the result = 4026466304
 CTRL: Read instruction at RAM address: bfc00010
 FSM: EXEC1
 PC: not reset or halt
-CTRL: RAM INFO DATA READ: 18008300
-CTRL : instruction word: 00830018, opcode: 000000, funccode: 011000
+CTRL: RAM INFO DATA READ: 18006400
+CTRL : instruction word: 00640018, opcode: 000000, funccode: 011000
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: RAM INFO DATA READ: 18008300
-CTRL : instruction word: 00830018, opcode: 000000, funccode: 011000
+CTRL: RAM INFO DATA READ: 18006400
+CTRL : instruction word: 00640018, opcode: 000000, funccode: 011000
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
 ALU: ALU input A:4294963199
 ALU: ALU input B:         0
 ALU: ALU opcode:24
 ALU: ALU r:4294963199
-CTRL: RAM INFO DATA READ: 18008300
-CTRL : instruction word: 00830018, opcode: 000000, funccode: 011000
+CTRL: RAM INFO DATA READ: 18006400
+CTRL : instruction word: 00640018, opcode: 000000, funccode: 011000
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
 PC: not reset or halt
 FSM: EXEC2
-CTRL: Instruction again: 00000000100000110000000000011000, FUNCCODE: 011000
+CTRL: Instruction again: 00000000011001000000000000011000, FUNCCODE: 011000
 CTRL: Here is the result = 4294963199
-CTRL: Instruction again: 00000000100000110000000000011000, FUNCCODE: 011000
+CTRL: Instruction again: 00000000011001000000000000011000, FUNCCODE: 011000
 CTRL: Here is the result = 4294963199
 FSM: FETCH
 PC: not reset or halt
@@ -284,7 +284,7 @@ Detect JR in EXEC 1, Rs:  0
 FSM: EXEC2
 PC: not reset or halt
 CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
-Arrived at jr: ffff0000, Rs:  0
+Arrived at jr: efff0000, Rs:  0
 CTRL: Here is the result =          0
 CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
 Arrived at jr: 00000000, Rs:  0

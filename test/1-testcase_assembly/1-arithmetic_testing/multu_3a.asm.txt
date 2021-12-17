@@ -1,5 +1,5 @@
 addiu $4, $0, 65525
 addiu $3, $0, 5
-mult $4, $3
+multu $4, $3
 jr $0
 mflo $2
