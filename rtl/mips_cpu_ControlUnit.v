@@ -61,13 +61,13 @@ module ControlUnit(
     //LS Block
     //input logic[31:0] LSRAMADDR, //
     output logic[3:0] byteEnable, //
-    output logic[31:0] LSRAMIN, //
+    output logic[31:0] LSRAMIN //
     //input logic isLoad, //
     //input logic isStore, //
 
     //output logic[31:0] LSIW, //
-    output logic[31:0] LSRSDATA, //
-    output logic[31:0] LSRTDATA //
+    // output logic[31:0] LSRSDATA, //
+    // output logic[31:0] LSRTDATA //
 
    
 );
@@ -76,6 +76,7 @@ module ControlUnit(
 
     //PC
     logic[31:0] PC;
+    logic updatePC;
 
     //RegFile
     logic[31:0] RsDATA, RtDATA; //regv0;
@@ -134,12 +135,14 @@ module ControlUnit(
             HALT = 1;
         end
         WENREG = 1;
+        updatePC = 0;
         
     end
     //-----------------------------------------------------------------------------------------------------------------------
     if (EXEC1)begin
         $display("CTRL: RAM INFO DATA READ: %h", RAMDATA);
         WENREG = 0;
+        updatePC = 0;
         IW = {RAMDATA[7:0], RAMDATA[15:8], RAMDATA[23:16], RAMDATA[31:24]};
         OPCODE = IW[31:26];
         FUNCCODE = IW[5:0];
@@ -305,6 +308,7 @@ module ControlUnit(
     if (EXEC2) begin
         jump_r = 0;
         jump_const = 0;
+        updatePC = !waitreqflag;
         $display("CTRL: Instruction again: %b, FUNCCODE: %b", IW, FUNCCODE);
         //need to decode the instructions according to the sytle in the assembler
         if(Rtype)begin
@@ -427,6 +431,7 @@ module ControlUnit(
                 end 
                 else if (OPCODE[5:3] == 3'b101) begin
                     RAMADDR = LSRAMADDR;
+                    updatePC = 1;
                 end
                 
             end
@@ -527,7 +532,7 @@ module ControlUnit(
         .reset(reset),
         .halt(HALT),
         .PCOffset(PCOffset),
-        .updatePC(EXEC2 && !waitreqflag),
+        .updatePC(updatePC),
         .reg_jump_value(jump_reg_value),
         .jump_r(jump_r),
         .jump_const(jump_const),
@@ -540,8 +545,8 @@ module ControlUnit(
         //Outputs to LAS
         .cycle(EXEC1),
         .fetch(FETCH), 
-        .reg_s(LSRSDATA),
-        .reg_t(LSRTDATA),
+        .reg_s(RsDATA),
+        .reg_t(RtDATA),
         .mem_read(RAMDATA),
         .instruction(IW),
 

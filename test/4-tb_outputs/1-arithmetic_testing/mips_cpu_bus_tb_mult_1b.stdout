@@ -66,6 +66,8 @@ PC: not reset or halt
 FSM: FETCH
 CTRL: Here is the result =          x
 CTRL: Read instruction at RAM address: bfc00000
+CTRL: Here is the result =          x
+CTRL: Read instruction at RAM address: bfc00000
 FSM: EXEC1
 PC: not reset or halt
 CTRL: RAM INFO DATA READ: 2b020424
@@ -108,9 +110,17 @@ PC: current value before increment: bfc00000
 CTRL: Here is the result =        555
 CTRL: Read instruction at RAM address: bfc00000
 CTRL: Here is the result =        555
+CTRL: Read instruction at RAM address: bfc00000
+CTRL: Here is the result =        555
 CTRL: Read instruction at RAM address: bfc00004
 PC: not reset or halt
 FSM: EXEC1
+CTRL: RAM INFO DATA READ: 2b020424
+CTRL : instruction word: 2404022b, opcode: 001001, funccode: 101011
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 00 Rt = 04 Immediate = 022b ALUCODE = 09 Rd = 00
 CTRL: RAM INFO DATA READ: 2b020424
 CTRL : instruction word: 2404022b, opcode: 001001, funccode: 101011
 IIIIIIIIII type
@@ -134,6 +144,8 @@ FSM: FETCH
 CTRL: Here is the result =        555
 CTRL: Read instruction at RAM address: bfc00004
 CTRL: Here is the result =        555
+CTRL: Read instruction at RAM address: bfc00004
+CTRL: Here is the result =        555
 CTRL: Read instruction at RAM address: bfc00008
 FSM: EXEC1
 PC: not reset or halt
@@ -152,6 +164,8 @@ CTRL: Here is the result =        555
 FSM: FETCH
 PC: not reset or halt
 PC: current value before increment: bfc00008
+CTRL: Here is the result =        555
+CTRL: Read instruction at RAM address: bfc00008
 CTRL: Here is the result =        555
 CTRL: Read instruction at RAM address: bfc00008
 CTRL: Here is the result =        555
@@ -188,6 +202,8 @@ FSM: FETCH
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc0000c
 CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc0000c
+CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc00010
 FSM: EXEC1
 PC: not reset or halt
@@ -210,6 +226,8 @@ PC: In r_delay: 00000000
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc00010
 CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc00010
+CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: 00000000
 FSM: EXEC1
 CTRL: RAM INFO DATA READ: 00000000
@@ -229,6 +247,8 @@ CTRL: Instruction again: 00000000000000000000000000000000, FUNCCODE: 000000
 CTRL: INFO: Currently in the SLL statement
 CTRL: Here is the result =          0
 FSM: FETCH
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: 00000000
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: 00000000
 FSM: HALT

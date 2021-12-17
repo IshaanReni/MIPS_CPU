@@ -66,6 +66,8 @@ PC: not reset or halt
 FSM: FETCH
 CTRL: Here is the result =          x
 CTRL: Read instruction at RAM address: bfc00000
+CTRL: Here is the result =          x
+CTRL: Read instruction at RAM address: bfc00000
 FSM: EXEC1
 PC: not reset or halt
 CTRL: RAM INFO DATA READ: 14006324
@@ -89,6 +91,8 @@ CTRL: Here is the result =         20
 FSM: FETCH
 PC: not reset or halt
 PC: current value before increment: bfc00000
+CTRL: Here is the result =         20
+CTRL: Read instruction at RAM address: bfc00000
 CTRL: Here is the result =         20
 CTRL: Read instruction at RAM address: bfc00000
 CTRL: Here is the result =         20
@@ -130,6 +134,8 @@ CTRL: Here is the result =         10
 PC: not reset or halt
 PC: current value before increment: bfc00004
 FSM: FETCH
+CTRL: Here is the result =         10
+CTRL: Read instruction at RAM address: bfc00004
 CTRL: Here is the result =         10
 CTRL: Read instruction at RAM address: bfc00004
 CTRL: Here is the result =         10
@@ -178,6 +184,8 @@ PC: current value before increment: bfc00008
 CTRL: Here is the result =         10
 CTRL: Read instruction at RAM address: bfc00008
 CTRL: Here is the result =         10
+CTRL: Read instruction at RAM address: bfc00008
+CTRL: Here is the result =         10
 CTRL: Read instruction at RAM address: bfc0000c
 PC: not reset or halt
 FSM: EXEC1
@@ -213,6 +221,8 @@ FSM: FETCH
 CTRL: Here is the result =         20
 CTRL: Read instruction at RAM address: bfc0000c
 CTRL: Here is the result =         20
+CTRL: Read instruction at RAM address: bfc0000c
+CTRL: Here is the result =         20
 CTRL: Read instruction at RAM address: bfc00010
 FSM: EXEC1
 PC: not reset or halt
@@ -235,6 +245,8 @@ CTRL: Here is the result =         30
 FSM: FETCH
 PC: not reset or halt
 PC: current value before increment: bfc00010
+CTRL: Here is the result =         30
+CTRL: Read instruction at RAM address: bfc00010
 CTRL: Here is the result =         30
 CTRL: Read instruction at RAM address: bfc00010
 CTRL: Here is the result =         30
@@ -266,6 +278,8 @@ CTRL: Here is the result =         60
 PC: not reset or halt
 PC: current value before increment: bfc00014
 FSM: FETCH
+CTRL: Here is the result =         60
+CTRL: Read instruction at RAM address: bfc00014
 CTRL: Here is the result =         60
 CTRL: Read instruction at RAM address: bfc00014
 CTRL: Here is the result =         60
@@ -307,6 +321,8 @@ PC: In jump_r
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc00018
 CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc00018
+CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc0001c
 PC: not reset or halt
 FSM: EXEC1
@@ -334,8 +350,16 @@ FSM: FETCH
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc0001c
 CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc0001c
+CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: 00000000
 FSM: EXEC1
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
 CTRL: RAM INFO DATA READ: 00000000
 CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
 RRRRRRRRRR type
@@ -347,6 +371,8 @@ CTRL: Instruction again: 00000000000000000000000000000000, FUNCCODE: 000000
 CTRL: INFO: Currently in the SLL statement
 CTRL: Here is the result =          0
 FSM: FETCH
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: 00000000
 CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: 00000000
 FSM: HALT
