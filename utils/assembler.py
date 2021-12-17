@@ -182,10 +182,18 @@ def assembly_to_hex(asm_dir, hex_dir):
                 rs = to_bin(i_line[3],5)
 
             #2 reg instructions (rs, rt, with a possible immediate value)
-            elif i_line[0].upper() in ['ADDIU', 'ANDI', 'ORI', 'SLTI', 'SLTIU', 'XORI', 'MULT', 'MULTU', 'DIV', 'DIVU']:
+            elif i_line[0].upper() in ['ADDIU', 'ANDI', 'ORI', 'SLTI', 'SLTIU', 'XORI']:
                 rt = to_bin(i_line[1],5)
                 rs = to_bin(i_line[2],5)
                 i_data = to_bin(i_line[3],16) if len(i_line) == 4 else to_bin(0, 16)
+            
+            #2 reg instruction mult/div
+            elif i_line[0].upper() in ['MULT', 'MULTU', 'DIV', 'DIVU']:
+                rs = to_bin(i_line[1],5)
+                rt = to_bin(i_line[2],5)
+                rd = to_bin(0,5)
+                shift = to_bin(0,5)
+
             #2 reg instructions 
             elif i_line[0].upper() in ['BEQ', 'BNE']:
                 rs = to_bin(i_line[1],5)

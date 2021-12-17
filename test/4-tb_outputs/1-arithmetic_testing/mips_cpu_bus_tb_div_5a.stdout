@@ -8,7 +8,7 @@ RAM : INIT : RAM contents at 00004e25 are: 03
 RAM : INIT : RAM contents at 00004e26 are: 15
 RAM : INIT : RAM contents at 00004e27 are: b3
 RAM : INIT : RAM contents at 00004e28 are: 00
-RAM : INIT : RAM contents at 00004e29 are: 64
+RAM : INIT : RAM contents at 00004e29 are: 83
 RAM : INIT : RAM contents at 00004e2a are: 00
 RAM : INIT : RAM contents at 00004e2b are: 1a
 RAM : INIT : RAM contents at 00004e2c are: 00
@@ -140,23 +140,23 @@ CTRL: Here is the result =       5555
 CTRL: Read instruction at RAM address: bfc00008
 FSM: EXEC1
 PC: not reset or halt
-CTRL: RAM INFO DATA READ: 1a006400
-CTRL : instruction word: 0064001a, opcode: 000000, funccode: 011010
+CTRL: RAM INFO DATA READ: 1a008300
+CTRL : instruction word: 0083001a, opcode: 000000, funccode: 011010
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: RAM INFO DATA READ: 1a006400
-CTRL : instruction word: 0064001a, opcode: 000000, funccode: 011010
+CTRL: RAM INFO DATA READ: 1a008300
+CTRL : instruction word: 0083001a, opcode: 000000, funccode: 011010
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: RAM INFO DATA READ: 1a006400
-CTRL : instruction word: 0064001a, opcode: 000000, funccode: 011010
+CTRL: RAM INFO DATA READ: 1a008300
+CTRL : instruction word: 0083001a, opcode: 000000, funccode: 011010
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
 PC: not reset or halt
 FSM: EXEC2
-CTRL: Instruction again: 00000000011001000000000000011010, FUNCCODE: 011010
+CTRL: Instruction again: 00000000100000110000000000011010, FUNCCODE: 011010
 CTRL: Here is the result =       5555
-CTRL: Instruction again: 00000000011001000000000000011010, FUNCCODE: 011010
+CTRL: Instruction again: 00000000100000110000000000011010, FUNCCODE: 011010
 CTRL: Here is the result =       5555
 FSM: FETCH
 PC: not reset or halt
