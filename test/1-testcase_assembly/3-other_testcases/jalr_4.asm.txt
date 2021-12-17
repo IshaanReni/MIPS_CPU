@@ -6,10 +6,11 @@ addiu $12, $12, 3
 sll $12, $12, 4
 addiu $12, $12, 4
 jalr $10, $12
-addiu $2, $2, 12
-addiu $2, $2, 4
+addiu $2, $2, 2
+addiu $2, $2, 10
 jr $0
-addiu $2, $2, 17
-jr $10
+addiu $2, $2, 14
 addiu $2, $2, 13
+jr $10
+addiu $2, $2, 2
 jr $0

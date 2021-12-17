@@ -1,7 +1,7 @@
-addiu $3, $0, 89
-addiu $2, $3, 75
+addiu $3, $0, 19
+addiu $2, $3, 52
 jalr $0
 addu $2, $2, $3
-addiu $2, $3, 22
-addiu $2, $2, 68
+addiu $2, $3, 47
+addiu $2, $2, 89
 jr $0

@@ -9,7 +9,7 @@ RAM : INIT : RAM contents at 00004e26 are: 00
 RAM : INIT : RAM contents at 00004e27 are: 08
 RAM : INIT : RAM contents at 00004e28 are: 00
 RAM : INIT : RAM contents at 00004e29 are: 05
-RAM : INIT : RAM contents at 00004e2a are: 20
+RAM : INIT : RAM contents at 00004e2a are: 10
 RAM : INIT : RAM contents at 00004e2b are: c2
 RAM : INIT : RAM contents at 00004e2c are: 00
 RAM : INIT : RAM contents at 00004e2d are: 00
@@ -138,27 +138,27 @@ CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: bfc00008
 FSM: EXEC1
 PC: not reset or halt
-CTRL: RAM INFO DATA READ: c2200500
-CTRL : instruction word: 000520c2, opcode: 000000, funccode: 000010
+CTRL: RAM INFO DATA READ: c2100500
+CTRL : instruction word: 000510c2, opcode: 000000, funccode: 000010
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: SLL SHAMT 03, Instruction:000520c2, FUNCCODE:000010
+CTRL: SLL SHAMT 03, Instruction:000510c2, FUNCCODE:000010
 HHHHHHHHH ALU CODE 02
-CTRL: RAM INFO DATA READ: c2200500
-CTRL : instruction word: 000520c2, opcode: 000000, funccode: 000010
+CTRL: RAM INFO DATA READ: c2100500
+CTRL : instruction word: 000510c2, opcode: 000000, funccode: 000010
 RRRRRRRRRR type
 DECODE: Decoding is done, enterring parameter assginment
-CTRL: SLL SHAMT 03, Instruction:000520c2, FUNCCODE:000010
+CTRL: SLL SHAMT 03, Instruction:000510c2, FUNCCODE:000010
 HHHHHHHHH ALU CODE 02
 PC: not reset or halt
 FSM: EXEC2
-CTRL: Instruction again: 00000000000001010010000011000010, FUNCCODE: 000010
+CTRL: Instruction again: 00000000000001010001000011000010, FUNCCODE: 000010
 CTRL: INFO: Currently in the SLL statement
 CTRL: Here is the result =          0
-CTRL: Instruction again: 00000000000001010010000011000010, FUNCCODE: 000010
+CTRL: Instruction again: 00000000000001010001000011000010, FUNCCODE: 000010
 CTRL: INFO: Currently in the SLL statement
 CTRL: Here is the result =          0
-CTRL: Instruction again: 00000000000001010010000011000010, FUNCCODE: 000010
+CTRL: Instruction again: 00000000000001010001000011000010, FUNCCODE: 000010
 CTRL: INFO: Currently in the SLL statement
 CTRL: Here is the result =          2
 FSM: FETCH
@@ -201,6 +201,6 @@ CTRL: Here is the result =          0
 CTRL: Read instruction at RAM address: 00000000
 FSM: HALT
 TB : finished; running=0
-TB : INFO : register_v0=00000000
+TB : INFO : register_v0=00000002
 test/0-MIPS_tb_RAM/mips_cpu_bus_tb.v:97: $finish called at 15500 (10ps)
-CPU : OUT   :          0
+CPU : OUT   :          2
