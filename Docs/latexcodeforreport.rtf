@@ -47,19 +47,21 @@ Control Unit & This block handles the timings of the CPU and trans-
 fers data to and from the other blocks. This block 
 is the only block to directly interface with the CPU 
 bus. \\
-State Machine & This block controls which state the current CPU is 
+State Machine & This block controls the state the CPU is 
 in - this block also enables the ability to stall, halt, 
 and reset the CPU.  \\
 Instruction 
+
 Register & This block is responsible for decoding the instruction
 and sending information to the Control Unit about 
 the current Instruction Word. \\
 Program Counter & This block keeps track of the address in the RAM of 
 which instruction is currently being executed; setting this to 0 causes the CPU to halt. \\
 Arithmetic Logic 
+
 Unit & This block is responsible for all the arithmetic capabilities of the CPU, as well as comparator operations required for conditional branches.  \\
-Load and Store & 0 / This block allows writing to the RAM as well as storing data from the RAM into the registers.  \\
-Register File & This block contains all 32 MIPS registers, and has the ability to read from two registers at any point as well as writing data to any one register.\\
+Load and Store & This block allows writing to the RAM as well as storing data from the RAM into the registers.  \\
+Register File & This block contains all 32 MIPS registers, and has the ability to read from two registers at any point as well as to write data to any one register.\\
 \hline
 \end{tabular}
 
@@ -68,10 +70,10 @@ Register File & This block contains all 32 MIPS registers, and has the ability t
 
 \subsection{Specification}
 
-\subsubsection{CPU Interface:} This CPU uses a memory bus based interface, to be compatible with industrial IP blocks. Instructions and data are fetched over the same interface, and the memory has variable latency.
+\subsubsection{CPU Interface:} This CPU uses a memory bus-based interface, to be compatible with industrial IP blocks. Instructions and data are fetched over the same interface, and the memory has variable latency.
 \subsubsection{Avalon compatible RAM:} The CPU has an Avalon compatible memory-mapped interface. The CPU is independent of the memory itself. 
 \subsubsection{Avalon Protocol:} Avalon is a clock synchronous protocol, so 'waitrequest' indicates a stall cycle, and 'readdata' is available after the read request cycle.
-\subsubsection{Functionality VS. Performance:} This CPU focus is stressed primarily on functionality.
+\subsubsection{Functionality VS. Performance:} This CPU has a focus primarily on functionality.
 \subsubsection{Reset Behaviour:} This CPU will not initiate any memory transactions while the reset signal is high, as the memory may also be resetting. 
 \subsubsection{Halt Behaviour:} This CPU is able to halt when the active signal is held at high. 
 
@@ -82,7 +84,7 @@ In order to avoid complications due to the precise timings of the CPU, we decide
 \subsubsection{Control Unit}
 To avoid the issue of coordinating timings between all the blocks, we decided to offload this task to the Control Unit, which sends signals to each block when the currently-executing instruction requires it. 
 \subsubsection{Block Operation}
-Each block does not need to worry about timings or which cycle the CPU is in, but will simply operate on the data when and if it receives the necessary data. The separate blocks are listed in the architecture overview. 
+Each block does not need to consider timings or which cycle the CPU is in, but will simply operate when and if it receives the necessary data. The separate blocks are listed in the architecture overview. 
 \subsubsection{Standard Execution Cycle}
 We decided to implement the standard 3-cycle execution cycle per instruction, FETCH, EXEC1 and EXEC2, with the ability to stall each of these states and a halt state. This 3-stage execution is only possible if all the arithmetic instructions could be done in a single cycle, which we found they were.
 
@@ -136,6 +138,7 @@ cm]{testing1.png} }}%
 
 A timing and area analysis, using Intel Quartus Prime, was run by configuring the CPU onto an Intel Cyclone IV FPGA. 
 
+\hfill \break
 
 \begin{tabular}[htp!]{ |p{5.95cm}|p{5.95cm}|}
 \hline
@@ -161,15 +164,11 @@ Total PLLs & 0/2 (0\%)  \\
 \hline
 FMax& Restricted FMax & Clock Name \\
 \hline
-4.61 MHz & 4.61 MHz & ControlUnit:cpuCU\|
-
-IW[29] \\
-64.36 MHz & 64.36 MHz & ControlUnit:cpuCU\|
-
-statemac:cpuSM\|e1\\
 143.04 MHz & 143.04 MHz & clk \\
 \hline
 \end{tabular}
+\hfill \break
+\hfill \break
 
 \section{References}
 
@@ -194,3 +193,4 @@ Pakin, S., 2021, \emph{The Comprehensive LATEX Symbol List} [Online]
 Available at: \url{http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf} [Accessed 17 December 2021]
 
 \end{document}
+
