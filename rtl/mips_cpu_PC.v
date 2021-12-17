@@ -23,7 +23,7 @@ module pc ( //output pc counter, inputs pc offset, update_pc
             PC <= 32'h00000000;
         end
         else begin
-            $display("PC: not reset or halt");
+            $display("PC: not reset or halt, updatePC: %b", updatePC);
 
             if (updatePC) begin
                 $display("PC: current value before increment: %h", PC);

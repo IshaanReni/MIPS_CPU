@@ -16,8 +16,6 @@ module ControlUnit(
     //PC
     //input logic[31:0] PC, //
     output logic[31:0] PCOffset, //
-    //output logic updatePC, //
-
 
     //RAM
     input logic[31:0] RAMDATA, //
@@ -65,10 +63,6 @@ module ControlUnit(
     //input logic isLoad, //
     //input logic isStore, //
 
-    //output logic[31:0] LSIW, //
-    // output logic[31:0] LSRSDATA, //
-    // output logic[31:0] LSRTDATA //
-
    
 );
     //State Machine
@@ -101,7 +95,6 @@ module ControlUnit(
     
     //LS Block
     logic[31:0] LSRAMADDR;
-    logic isLoad, isStore;
     logic[31:0] RdDATA; //
 
     logic[31:0] IW;
@@ -127,7 +120,6 @@ module ControlUnit(
         RAMADDR = PC; //Fetch instruction from PC
         // $display("CTRL: Is the CPU active right now?: ", ACTIVE);
         $display("CTRL: Read instruction at RAM address: %h", RAMADDR);
-        
         // if ((IW[31:26] == 6'b000000) && (IW[5:0] == 6'b001000)) begin
         //     HALT = 1;
         // end
@@ -264,18 +256,15 @@ module ControlUnit(
             //LB, LBU, LH, LHU, LW, LWL, LWR, SB, SH, SW
             else if((OPCODE == 6'b100000)|| (OPCODE == 6'b100100) || (OPCODE == 6'b100001) || (OPCODE == 6'b100101) || 
             (OPCODE == 6'b100011) || (OPCODE == 6'b101000) || (OPCODE == 6'b101001) || (OPCODE == 6'b101011) || 
-            (OPCODE == 6'b100010) || (OPCODE == 6'b100110))begin
+            (OPCODE == 6'b100010) || (OPCODE == 6'b100110)) begin
                 Rs = IW[25:21];
                 Rt = IW[20:16];
                 Immediate = IW[15:0];
 
                 if (OPCODE[5:3] == 3'b100) begin
-                    isLoad = 1;
                     RAMADDR = LSRAMADDR;
                 end 
-                else if (OPCODE[5:3] == 3'b101) begin
-                    isStore = 1;
-                end
+
                 ALUCODE = 6'b111111; // opcode that ensures default case in alu
             end
             //LUI
@@ -308,7 +297,9 @@ module ControlUnit(
     if (EXEC2) begin
         jump_r = 0;
         jump_const = 0;
+        WENREG = 0;
         updatePC = !waitreqflag;
+
         $display("CTRL: Instruction again: %b, FUNCCODE: %b", IW, FUNCCODE);
         //need to decode the instructions according to the sytle in the assembler
         if(Rtype)begin
@@ -419,8 +410,8 @@ module ControlUnit(
             end
             //LB, LBU, LH, LHU, LW, LWL, LWR, SB, SH, SW
             else if((OPCODE == 6'b100000)|| (OPCODE == 6'b100100) || (OPCODE == 6'b100001) || (OPCODE == 6'b100101) || 
-            (OPCODE == 6'b100011) || (OPCODE == 6'b101000) || (OPCODE == 6'b101001) || (OPCODE == 6'b101011) || 
-            (OPCODE == 6'b100010) || (OPCODE == 6'b100110)) begin
+                (OPCODE == 6'b100011) || (OPCODE == 6'b101000) || (OPCODE == 6'b101001) || (OPCODE == 6'b101011) || 
+                (OPCODE == 6'b100010) || (OPCODE == 6'b100110)) begin
                 
                 OP1 = 0; //not required
                 OP2 = 0; //not required
