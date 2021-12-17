@@ -1,0 +1,352 @@
+RAM : INIT : Loading RAM contents from ./test/2-bin/2-conditionals/bgezal_2.hex.txt
+RAM : INIT : RAM contents at 00004e20 are: 24
+RAM : INIT : RAM contents at 00004e21 are: a5
+RAM : INIT : RAM contents at 00004e22 are: ff
+RAM : INIT : RAM contents at 00004e23 are: ba
+RAM : INIT : RAM contents at 00004e24 are: 04
+RAM : INIT : RAM contents at 00004e25 are: b1
+RAM : INIT : RAM contents at 00004e26 are: 00
+RAM : INIT : RAM contents at 00004e27 are: 04
+RAM : INIT : RAM contents at 00004e28 are: 24
+RAM : INIT : RAM contents at 00004e29 are: 02
+RAM : INIT : RAM contents at 00004e2a are: 00
+RAM : INIT : RAM contents at 00004e2b are: 46
+RAM : INIT : RAM contents at 00004e2c are: 24
+RAM : INIT : RAM contents at 00004e2d are: 43
+RAM : INIT : RAM contents at 00004e2e are: 00
+RAM : INIT : RAM contents at 00004e2f are: 14
+RAM : INIT : RAM contents at 00004e30 are: 00
+RAM : INIT : RAM contents at 00004e31 are: 43
+RAM : INIT : RAM contents at 00004e32 are: 20
+RAM : INIT : RAM contents at 00004e33 are: 21
+RAM : INIT : RAM contents at 00004e34 are: 00
+RAM : INIT : RAM contents at 00004e35 are: 64
+RAM : INIT : RAM contents at 00004e36 are: 10
+RAM : INIT : RAM contents at 00004e37 are: 21
+RAM : INIT : RAM contents at 00004e38 are: 00
+RAM : INIT : RAM contents at 00004e39 are: 00
+RAM : INIT : RAM contents at 00004e3a are: 00
+RAM : INIT : RAM contents at 00004e3b are: 08
+RAM : INIT : RAM contents at 00004e3c are: 00
+RAM : INIT : RAM contents at 00004e3d are: 00
+PC: not reset or halt
+FSM: FETCH
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: xxxxxxxx
+FSM: EXEC1
+TB : Reset is now low.
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CPU : INFO   : Resetting.
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+ALU: ALU input A:         x
+ALU: ALU input B:         x
+ALU: ALU opcode: 0
+ALU: ALU r:         x
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+PC: not reset or halt
+FSM: FETCH
+CTRL: Here is the result =          x
+CTRL: Read instruction at RAM address: bfc00000
+FSM: EXEC1
+PC: not reset or halt
+CTRL: RAM INFO DATA READ: baffa524
+CTRL : instruction word: 24a5ffba, opcode: 001001, funccode: 111010
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: baffa524
+CTRL : instruction word: 24a5ffba, opcode: 001001, funccode: 111010
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 05 Rt = 05 Immediate = ffba ALUCODE = 09 Rd = 05
+PC: not reset or halt
+FSM: EXEC2
+CTRL: Instruction again: 00100100101001011111111110111010, FUNCCODE: 111010
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result =          x
+CTRL: Instruction again: 00100100101001011111111110111010, FUNCCODE: 111010
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result = 4294967226
+FSM: FETCH
+PC: not reset or halt
+PC: current value before increment: bfc00000
+CTRL: Here is the result = 4294967226
+CTRL: Read instruction at RAM address: bfc00000
+CTRL: Here is the result = 4294967226
+CTRL: Read instruction at RAM address: bfc00004
+PC: not reset or halt
+FSM: EXEC1
+CTRL: RAM INFO DATA READ: 0400b104
+CTRL : instruction word: 04b10004, opcode: 000001, funccode: 000100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 0400b104
+CTRL : instruction word: 04b10004, opcode: 000001, funccode: 000100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 0400b104
+CTRL : instruction word: 04b10004, opcode: 000001, funccode: 000100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 0400b104
+CTRL : instruction word: 04b10004, opcode: 000001, funccode: 000100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 0400b104
+CTRL : instruction word: 04b10004, opcode: 000001, funccode: 000100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+FSM: EXEC2
+PC: not reset or halt
+CTRL: Instruction again: 00000100101100010000000000000100, FUNCCODE: 000100
+CTRL: Here is the result = 4294967226
+CTRL: Instruction again: 00000100101100010000000000000100, FUNCCODE: 000100
+CTRL: Here is the result = 4294967226
+PC: not reset or halt
+PC: current value before increment: bfc00004
+PC: In jump_constant
+FSM: FETCH
+CTRL: Here is the result = 4294967226
+CTRL: Read instruction at RAM address: bfc00004
+CTRL: Here is the result = 4294967226
+CTRL: Read instruction at RAM address: bfc00008
+FSM: EXEC1
+PC: not reset or halt
+CTRL: RAM INFO DATA READ: 46000224
+CTRL : instruction word: 24020046, opcode: 001001, funccode: 000110
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 00 Rt = 02 Immediate = 0046 ALUCODE = 09 Rd = 00
+CTRL: RAM INFO DATA READ: 46000224
+CTRL : instruction word: 24020046, opcode: 001001, funccode: 000110
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 00 Rt = 02 Immediate = 0046 ALUCODE = 09 Rd = 00
+CTRL: RAM INFO DATA READ: 46000224
+CTRL : instruction word: 24020046, opcode: 001001, funccode: 000110
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 00 Rt = 02 Immediate = 0046 ALUCODE = 09 Rd = 00
+CTRL: RAM INFO DATA READ: 46000224
+CTRL : instruction word: 24020046, opcode: 001001, funccode: 000110
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 00 Rt = 02 Immediate = 0046 ALUCODE = 09 Rd = 00
+PC: not reset or halt
+FSM: EXEC2
+CTRL: Instruction again: 00100100000000100000000001000110, FUNCCODE: 000110
+CTRL: Here is the RsDATA in andi = 4294967226
+CTRL: Here is the result = 4294967226
+CTRL: Instruction again: 00100100000000100000000001000110, FUNCCODE: 000110
+CTRL: Here is the RsDATA in andi = 4294967226
+CTRL: Here is the result =          0
+CTRL: Instruction again: 00100100000000100000000001000110, FUNCCODE: 000110
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result =          0
+CTRL: Instruction again: 00100100000000100000000001000110, FUNCCODE: 000110
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result =         70
+FSM: FETCH
+PC: not reset or halt
+PC: current value before increment: bfc00008
+PC: In o_delay
+CTRL: Here is the result =         70
+CTRL: Read instruction at RAM address: bfc00008
+CTRL: Here is the result =         70
+CTRL: Read instruction at RAM address: bfc0000c
+PC: not reset or halt
+FSM: EXEC1
+CTRL: RAM INFO DATA READ: 14004324
+CTRL : instruction word: 24430014, opcode: 001001, funccode: 010100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 02 Rt = 03 Immediate = 0014 ALUCODE = 09 Rd = 02
+CTRL: RAM INFO DATA READ: 14004324
+CTRL : instruction word: 24430014, opcode: 001001, funccode: 010100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 02 Rt = 03 Immediate = 0014 ALUCODE = 09 Rd = 02
+CTRL: RAM INFO DATA READ: 14004324
+CTRL : instruction word: 24430014, opcode: 001001, funccode: 010100
+IIIIIIIIII type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: INFO: ADDIU called
+CTRL: INPUT INFO: Rs = 02 Rt = 03 Immediate = 0014 ALUCODE = 09 Rd = 02
+FSM: EXEC2
+PC: not reset or halt
+CTRL: Instruction again: 00100100010000110000000000010100, FUNCCODE: 010100
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result =         70
+CTRL: Instruction again: 00100100010000110000000000010100, FUNCCODE: 010100
+CTRL: Here is the RsDATA in andi =          0
+CTRL: Here is the result =         20
+CTRL: Instruction again: 00100100010000110000000000010100, FUNCCODE: 010100
+CTRL: Here is the RsDATA in andi =         70
+CTRL: Here is the result =         20
+CTRL: Instruction again: 00100100010000110000000000010100, FUNCCODE: 010100
+CTRL: Here is the RsDATA in andi =         70
+CTRL: Here is the result =         90
+PC: not reset or halt
+PC: current value before increment: bfc0000c
+FSM: FETCH
+CTRL: Here is the result =         90
+CTRL: Read instruction at RAM address: bfc0000c
+CTRL: Here is the result =         90
+CTRL: Read instruction at RAM address: bfc00010
+FSM: EXEC1
+PC: not reset or halt
+CTRL: RAM INFO DATA READ: 21204300
+CTRL : instruction word: 00432021, opcode: 000000, funccode: 100001
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 21204300
+CTRL : instruction word: 00432021, opcode: 000000, funccode: 100001
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 21204300
+CTRL : instruction word: 00432021, opcode: 000000, funccode: 100001
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+PC: not reset or halt
+FSM: EXEC2
+CTRL: Instruction again: 00000000010000110010000000100001, FUNCCODE: 100001
+CTRL: Here is the result =         90
+CTRL: Instruction again: 00000000010000110010000000100001, FUNCCODE: 100001
+CTRL: Here is the result =        160
+FSM: FETCH
+PC: not reset or halt
+PC: current value before increment: bfc00010
+CTRL: Here is the result =        160
+CTRL: Read instruction at RAM address: bfc00010
+CTRL: Here is the result =        160
+CTRL: Read instruction at RAM address: bfc00014
+PC: not reset or halt
+FSM: EXEC1
+CTRL: RAM INFO DATA READ: 21106400
+CTRL : instruction word: 00641021, opcode: 000000, funccode: 100001
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: RAM INFO DATA READ: 21106400
+CTRL : instruction word: 00641021, opcode: 000000, funccode: 100001
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+FSM: EXEC2
+PC: not reset or halt
+CTRL: Instruction again: 00000000011001000001000000100001, FUNCCODE: 100001
+CTRL: Here is the result =        160
+CTRL: Instruction again: 00000000011001000001000000100001, FUNCCODE: 100001
+CTRL: Here is the result =        160
+CTRL: Instruction again: 00000000011001000001000000100001, FUNCCODE: 100001
+CTRL: Here is the result =        250
+PC: not reset or halt
+PC: current value before increment: bfc00014
+FSM: FETCH
+CTRL: Here is the result =        250
+CTRL: Read instruction at RAM address: bfc00014
+CTRL: Here is the result =        250
+CTRL: Read instruction at RAM address: bfc00018
+FSM: EXEC1
+PC: not reset or halt
+CTRL: RAM INFO DATA READ: 08000000
+CTRL : instruction word: 00000008, opcode: 000000, funccode: 001000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+Detect JR in EXEC 1, Rs:  0
+CTRL: RAM INFO DATA READ: 08000000
+CTRL : instruction word: 00000008, opcode: 000000, funccode: 001000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+Detect JR in EXEC 1, Rs:  0
+CTRL: RAM INFO DATA READ: 08000000
+CTRL : instruction word: 00000008, opcode: 000000, funccode: 001000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+Detect JR in EXEC 1, Rs:  0
+PC: not reset or halt
+FSM: EXEC2
+CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
+Arrived at jr: 0000005a, Rs:  0
+CTRL: Here is the result =          0
+CTRL: Instruction again: 00000000000000000000000000001000, FUNCCODE: 001000
+Arrived at jr: 00000000, Rs:  0
+CTRL: Here is the result =          0
+FSM: FETCH
+PC: not reset or halt
+PC: current value before increment: bfc00018
+PC: In jump_r
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc00018
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc0001c
+PC: not reset or halt
+FSM: EXEC1
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+FSM: EXEC2
+PC: not reset or halt
+CTRL: Instruction again: 00000000000000000000000000000000, FUNCCODE: 000000
+CTRL: INFO: Currently in the SLL statement
+CTRL: Here is the result =          0
+PC: not reset or halt
+PC: current value before increment: bfc0001c
+PC: In r_delay: 00000000
+FSM: FETCH
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: bfc0001c
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: 00000000
+FSM: EXEC1
+CTRL: RAM INFO DATA READ: 00000000
+CTRL : instruction word: 00000000, opcode: 000000, funccode: 000000
+RRRRRRRRRR type
+DECODE: Decoding is done, enterring parameter assginment
+CTRL: SLL SHAMT 00, Instruction:00000000, FUNCCODE:000000
+HHHHHHHHH ALU CODE 00
+FSM: EXEC2
+CTRL: Instruction again: 00000000000000000000000000000000, FUNCCODE: 000000
+CTRL: INFO: Currently in the SLL statement
+CTRL: Here is the result =          0
+FSM: FETCH
+CTRL: Here is the result =          0
+CTRL: Read instruction at RAM address: 00000000
+FSM: HALT
+FSM: HALT
+TB : finished; running=0
+TB : INFO : register_v0=000000fa
+test/0-MIPS_tb_RAM/mips_cpu_bus_tb.v:97: $finish called at 31500 (10ps)
+CPU : OUT   :        250

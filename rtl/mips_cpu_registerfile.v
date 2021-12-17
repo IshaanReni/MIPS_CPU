@@ -26,8 +26,6 @@ always_ff @(posedge clk or posedge reset) begin
 	else if (WENREG) begin
 		regFile[int'(Rd)] <= RdDATA;
 	end
-
-	$display("REG File: 2 and 4 %h, %h", regFile[2], regFile[4]);
 end
 
 
