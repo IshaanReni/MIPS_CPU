@@ -10,7 +10,7 @@ RAM : INIT : RAM contents at 00004e27 are: 0a
 RAM : INIT : RAM contents at 00004e28 are: 10
 RAM : INIT : RAM contents at 00004e29 are: 64
 RAM : INIT : RAM contents at 00004e2a are: ff
-RAM : INIT : RAM contents at 00004e2b are: ff
+RAM : INIT : RAM contents at 00004e2b are: fc
 RAM : INIT : RAM contents at 00004e2c are: 00
 RAM : INIT : RAM contents at 00004e2d are: 44
 RAM : INIT : RAM contents at 00004e2e are: 10
@@ -142,39 +142,39 @@ CTRL: Here is the result =         10
 CTRL: Read instruction at RAM address: bfc00008
 FSM: EXEC1
 PC: not reset or halt
-CTRL: RAM INFO DATA READ: ffff6410
-CTRL : instruction word: 1064ffff, opcode: 000100, funccode: 111111
+CTRL: RAM INFO DATA READ: fcff6410
+CTRL : instruction word: 1064fffc, opcode: 000100, funccode: 111100
 IIIIIIIIII type
 DECODE: Decoding is done, enterring parameter assginment
 CTRL: INFO: ADDIU called
-CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = ffff ALUCODE = 04 Rd = 03
-CTRL: RAM INFO DATA READ: ffff6410
-CTRL : instruction word: 1064ffff, opcode: 000100, funccode: 111111
+CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = fffc ALUCODE = 04 Rd = 03
+CTRL: RAM INFO DATA READ: fcff6410
+CTRL : instruction word: 1064fffc, opcode: 000100, funccode: 111100
 IIIIIIIIII type
 DECODE: Decoding is done, enterring parameter assginment
 CTRL: INFO: ADDIU called
-CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = ffff ALUCODE = 04 Rd = 03
-CTRL: RAM INFO DATA READ: ffff6410
-CTRL : instruction word: 1064ffff, opcode: 000100, funccode: 111111
+CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = fffc ALUCODE = 04 Rd = 03
+CTRL: RAM INFO DATA READ: fcff6410
+CTRL : instruction word: 1064fffc, opcode: 000100, funccode: 111100
 IIIIIIIIII type
 DECODE: Decoding is done, enterring parameter assginment
 CTRL: INFO: ADDIU called
-CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = ffff ALUCODE = 04 Rd = 03
-CTRL: RAM INFO DATA READ: ffff6410
-CTRL : instruction word: 1064ffff, opcode: 000100, funccode: 111111
+CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = fffc ALUCODE = 04 Rd = 03
+CTRL: RAM INFO DATA READ: fcff6410
+CTRL : instruction word: 1064fffc, opcode: 000100, funccode: 111100
 IIIIIIIIII type
 DECODE: Decoding is done, enterring parameter assginment
 CTRL: INFO: ADDIU called
-CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = ffff ALUCODE = 04 Rd = 03
-CTRL: RAM INFO DATA READ: ffff6410
-CTRL : instruction word: 1064ffff, opcode: 000100, funccode: 111111
+CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = fffc ALUCODE = 04 Rd = 03
+CTRL: RAM INFO DATA READ: fcff6410
+CTRL : instruction word: 1064fffc, opcode: 000100, funccode: 111100
 IIIIIIIIII type
 DECODE: Decoding is done, enterring parameter assginment
 CTRL: INFO: ADDIU called
-CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = ffff ALUCODE = 04 Rd = 03
+CTRL: INPUT INFO: Rs = 03 Rt = 04 Immediate = fffc ALUCODE = 04 Rd = 03
 PC: not reset or halt
 FSM: EXEC2
-CTRL: Instruction again: 00010000011001001111111111111111, FUNCCODE: 111111
+CTRL: Instruction again: 00010000011001001111111111111100, FUNCCODE: 111100
 CTRL: Here is the result =         10
 FSM: FETCH
 PC: not reset or halt
