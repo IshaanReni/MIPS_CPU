@@ -1,0 +1,13 @@
+jal 31200
+addiu $2, $2, 1
+addiu $2, $2, 2
+addiu $2, $2, 3
+jr $0
+addiu $2, $2, 4
+addiu $2, $2, 5
+addiu $2, $2, 6
+addiu $2, $2, 7
+jr $31
+addiu $2, $2, 8
+addiu $2, $2, 9
+jr $0

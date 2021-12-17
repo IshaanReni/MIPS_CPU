@@ -1,0 +1,4 @@
+addiu $3, $3, 65535
+mtlo $3
+jr $0
+mflo $2

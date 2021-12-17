@@ -1,0 +1,163 @@
+RAM : INIT : Loading RAM contents from ./test/2-bin/2-conditionals/beq_3.hex.txt
+RAM : INIT : RAM contents at 00004e20 are: 24
+RAM : INIT : RAM contents at 00004e21 are: 63
+RAM : INIT : RAM contents at 00004e22 are: 00
+RAM : INIT : RAM contents at 00004e23 are: 0a
+RAM : INIT : RAM contents at 00004e24 are: 24
+RAM : INIT : RAM contents at 00004e25 are: 84
+RAM : INIT : RAM contents at 00004e26 are: 00
+RAM : INIT : RAM contents at 00004e27 are: 0a
+RAM : INIT : RAM contents at 00004e28 are: 10
+RAM : INIT : RAM contents at 00004e29 are: 64
+RAM : INIT : RAM contents at 00004e2a are: ff
+RAM : INIT : RAM contents at 00004e2b are: ff
+RAM : INIT : RAM contents at 00004e2c are: 00
+RAM : INIT : RAM contents at 00004e2d are: 42
+RAM : INIT : RAM contents at 00004e2e are: 20
+RAM : INIT : RAM contents at 00004e2f are: 21
+RAM : INIT : RAM contents at 00004e30 are: 00
+RAM : INIT : RAM contents at 00004e31 are: 00
+RAM : INIT : RAM contents at 00004e32 are: 00
+RAM : INIT : RAM contents at 00004e33 are: 08
+RAM : INIT : RAM contents at 00004e34 are: 00
+RAM : INIT : RAM contents at 00004e35 are: 00
+RAM : INIT : RAM contents at 00004e36 are: 00
+RAM : INIT : RAM contents at 00004e37 are: 00
+RAM : INIT : RAM contents at 00004e38 are: 00
+RAM : INIT : RAM contents at 00004e39 are: 00
+RAM : INIT : RAM contents at 00004e3a are: 00
+RAM : INIT : RAM contents at 00004e3b are: 00
+RAM : INIT : RAM contents at 00004e3c are: 00
+RAM : INIT : RAM contents at 00004e3d are: 00
+RAM : INIT : RAM contents at 00004e3e are: 00
+RAM : INIT : RAM contents at 00004e3f are: 00
+RAM : INIT : RAM contents at 00004e40 are: 00
+RAM : INIT : RAM contents at 00004e41 are: 00
+RAM : INIT : RAM contents at 00004e42 are: 00
+RAM : INIT : RAM contents at 00004e43 are: 00
+RAM : INIT : RAM contents at 00004e44 are: 00
+RAM : INIT : RAM contents at 00004e45 are: 00
+RAM : INIT : RAM contents at 00004e46 are: 00
+RAM : INIT : RAM contents at 00004e47 are: 00
+RAM : INIT : RAM contents at 00004e48 are: 00
+RAM : INIT : RAM contents at 00004e49 are: 00
+RAM : INIT : RAM contents at 00004e4a are: 00
+RAM : INIT : RAM contents at 00004e4b are: 00
+RAM : INIT : RAM contents at 00004e4c are: 00
+RAM : INIT : RAM contents at 00004e4d are: 00
+RAM : INIT : RAM contents at 00004e4e are: 00
+RAM : INIT : RAM contents at 00004e4f are: 00
+RAM : INIT : RAM contents at 00004e50 are: 00
+RAM : INIT : RAM contents at 00004e51 are: 00
+RAM : INIT : RAM contents at 00004e52 are: 00
+RAM : INIT : RAM contents at 00004e53 are: 00
+RAM : INIT : RAM contents at 00004e54 are: 00
+RAM : INIT : RAM contents at 00004e55 are: 00
+RAM : INIT : RAM contents at 00004e56 are: 00
+RAM : INIT : RAM contents at 00004e57 are: 00
+RAM : INIT : RAM contents at 00004e58 are: 00
+RAM : INIT : RAM contents at 00004e59 are: 00
+RAM : INIT : RAM contents at 00004e5a are: 00
+RAM : INIT : RAM contents at 00004e5b are: 00
+RAM : INIT : RAM contents at 00004e5c are: 00
+RAM : INIT : RAM contents at 00004e5d are: 00
+RAM : INIT : RAM contents at 00004e5e are: 00
+RAM : INIT : RAM contents at 00004e5f are: 00
+RAM : INIT : RAM contents at 00004e60 are: 00
+RAM : INIT : RAM contents at 00004e61 are: 00
+RAM : INIT : RAM contents at 00004e62 are: 00
+RAM : INIT : RAM contents at 00004e63 are: 00
+RAM : INIT : RAM contents at 00004e64 are: 00
+RAM : INIT : RAM contents at 00004e65 are: 00
+RAM : INIT : RAM contents at 00004e66 are: 00
+RAM : INIT : RAM contents at 00004e67 are: 00
+RAM : INIT : RAM contents at 00004e68 are: 00
+RAM : INIT : RAM contents at 00004e69 are: 00
+RAM : INIT : RAM contents at 00004e6a are: 00
+RAM : INIT : RAM contents at 00004e6b are: 00
+RAM : INIT : RAM contents at 00004e6c are: 00
+RAM : INIT : RAM contents at 00004e6d are: 00
+RAM : INIT : RAM contents at 00004e6e are: 00
+RAM : INIT : RAM contents at 00004e6f are: 00
+RAM : INIT : RAM contents at 00004e70 are: 00
+RAM : INIT : RAM contents at 00004e71 are: 00
+RAM : INIT : RAM contents at 00004e72 are: 00
+RAM : INIT : RAM contents at 00004e73 are: 00
+RAM : INIT : RAM contents at 00004e74 are: 00
+RAM : INIT : RAM contents at 00004e75 are: 00
+RAM : INIT : RAM contents at 00004e76 are: 00
+RAM : INIT : RAM contents at 00004e77 are: 00
+RAM : INIT : RAM contents at 00004e78 are: 00
+RAM : INIT : RAM contents at 00004e79 are: 00
+RAM : INIT : RAM contents at 00004e7a are: 00
+RAM : INIT : RAM contents at 00004e7b are: 00
+RAM : INIT : RAM contents at 00004e7c are: 00
+RAM : INIT : RAM contents at 00004e7d are: 00
+RAM : INIT : RAM contents at 00004e7e are: 00
+RAM : INIT : RAM contents at 00004e7f are: 00
+RAM : INIT : RAM contents at 00004e80 are: 00
+RAM : INIT : RAM contents at 00004e81 are: 00
+RAM : INIT : RAM contents at 00004e82 are: 00
+RAM : INIT : RAM contents at 00004e83 are: 00
+REG : Register value changed to: xxxxxxxx, Location : xx
+CPU : INFO   : Read instruction=xxxxxxxx
+CPU : INFO   : Read instruction=xxxxxxxx
+CPU : INFO   : Resetting.
+CPU : INFO   : Fetching instruction=xxxxxxxx
+CPU : INFO   : Read instruction=xxxxxxxx
+CPU : INFO   : Resetting.
+CPU : INFO   : Fetching instruction=xxxxxxxx
+CPU : INFO   : Read instruction=xxxxxxxx
+CPU : INFO   : Resetting.
+CPU : INFO   : Fetching instruction=xxxxxxxx
+TB : Reset is now low.
+CTRL : instruction word: xxxxxxxx
+CPU : INFO   : Resetting.
+CPU : INFO   : Fetching instruction=xxxxxxxx
+CPU : INFO   : Read instruction=bfc00000
+CPU : INFO   : Read instruction=bfc00000
+CPU : INFO   : Read instruction=bfc00000
+CPU : INFO   : Read instruction=bfc00000
+RAM: reading data at location: bfc00000  data: 00000000
+CTRL : instruction word: xxxxxxxx
+CPU : INFO   : Read instruction=bfc00000
+CPU : INFO   : Read instruction=bfc00000
+CPU : INFO   : Read instruction=bfc00000
+RAM: reading data at location: bfc00000  data: 0a006324
+CTRL : instruction word: 00000000
+REG : Register value changed to: xxxxxxxx, Location : 00
+CTRL : got inside the i-type.
+CPU : INFO   : Read instruction=bfc00008
+CPU : INFO   : Read instruction=bfc00008
+CPU : INFO   : Read instruction=bfc00008
+RAM: reading data at location: bfc00008  data: 0a006324
+CTRL : instruction word: 2463000a
+REG : Register value changed to: xxxxxxxx, Location : 00
+CTRL : got inside the i-type.
+CPU : INFO   : Read instruction=bfc00010
+CPU : INFO   : Read instruction=bfc00010
+CPU : INFO   : Read instruction=bfc00010
+RAM: reading data at location: bfc00010  data: ffff6410
+CTRL : instruction word: 2463000a
+REG : Register value changed to: xxxxxxxx, Location : 00
+CTRL : got inside the i-type.
+CTRL : got inside the branch.
+CPU : INFO   : Read instruction=bfc00018
+CPU : INFO   : Read instruction=bfc00018
+CPU : INFO   : Read instruction=bfc00018
+RAM: reading data at location: bfc00018  data: 08000000
+CTRL : instruction word: 1064ffff
+CTRL : got inside the j-type.
+CPU : INFO   : Read instruction=bfc00020
+CPU : INFO   : Read instruction=bfc00020
+CPU : INFO   : Read instruction=bfc00020
+RAM: reading data at location: bfc00020  data: 00000000
+CTRL : instruction word: 00000008
+REG : Register value changed to: fffffff6, Location : 00
+CPU : INFO   : Read instruction=00000000
+CPU : INFO   : Read instruction=00000000
+CPU : INFO   : Read instruction=00000000
+TB : finished; running=0
+TB : INFO : register_v0=00000000
+test/0-MIPS_tb_RAM/mips_cpu_bus_tb.v:95: $finish called at 43000 (10ps)
+          0

@@ -1,0 +1,6 @@
+addiu $7, $7, -20
+blez $7, 3
+addiu $7, $0, 77
+addiu $7, $7, 87
+addu $2, $7, $7
+jr $0

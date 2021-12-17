@@ -1,0 +1,9 @@
+addiu $13, $13, 0
+blez $13, 3
+addiu $13, $0, 5
+addiu $13, $13, 10
+blez $13, 3
+addiu $2, $13, 9
+addiu $13, $13, 11
+addu $2, $2, $13
+jr $0

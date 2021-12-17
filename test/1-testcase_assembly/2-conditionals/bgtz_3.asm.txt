@@ -1,0 +1,7 @@
+addiu $3, $3, 0
+bgtz $3, 4
+addiu $3, $3, 10
+addiu $2, $2, 12
+bgtz $3, -4
+addu $2, $2, $3
+jr $0

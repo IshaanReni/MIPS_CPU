@@ -1,0 +1,5 @@
+addiu $4, $0, 5555
+addiu $3, $0, 1
+div $4, $3
+jr $0
+mfhi $2

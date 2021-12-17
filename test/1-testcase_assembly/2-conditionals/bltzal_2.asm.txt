@@ -1,0 +1,7 @@
+addu $12, $12, $0
+bltzal $12, 3
+addiu $2, $2, 10
+jr $0
+addiu $2, $2, 33
+addiu $2, $2, 3
+jr $0

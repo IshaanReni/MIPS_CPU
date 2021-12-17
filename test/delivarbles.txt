@@ -1,0 +1,54 @@
+test/test_mips_cpu_bus.sh or rtl/test_mips_cpu_harvard.sh :
+A test-bench for any CPU meeting the given interface.
+This will act as a test-bench for your own CPU, but should also aim to check whether any other CPU works as well.
+You can include both scripts, but only the one corresponding to your submitted CPU (bus or harvard) will be evaluated.
+
+
+
+Test-bench
+Your test-bench is a bash script called test/test_mips_cpu_bus.sh or test/test_mips_cpu_harvard.sh that takes a required argument specifying a directory containing an RTL CPU implementation, and an optional argument specifying which instruction to test:
+
+test/test_mips_cpu_(bus|harvard).sh [source_directory] [instruction]?
+Here source_directory is the relative or absolute path of a directory containing a verilog CPU, and instruction is the lower-case name of a MIPS instruction to test. If no instruction is specified, then all test-cases should be run. Your test-bench may choose to ignore the instruction filter, and just produce all outputs.
+
+The test-bench should print one-line per test-case to stdout, with the each line containing the following components separated by whitespace:
+
+Testcase-id : A unique name for the test-case, which can contain any of the characters a-z, A-Z, 0-9, _, or -.
+Instruction : the instruction being tested, given as the lower-case MIPS instruction name.
+Status : Either the string "Pass" or "Fail".
+Comments : The remainder of the line is available for free-from comments or descriptions.
+If there are no comments then a trailing comma is not needed. Examples of possible output are:
+
+addu_1 addu Pass
+addu-2 addu Fail   Test return wrong value
+MULTZ    mult    Pass    # Multiply by zero
+Assuming you are in the root directory of your submission, you could test your CPU rtl/mips_cpu_bus.v as follows:
+
+$ test/test_mips_cpu_bus.sh rtl
+addu_1 addu Pass
+addu_2 addu Pass
+subu_1 subu Pass
+subu_2 subu Pass
+Restricting it to use the addu instruction:
+
+$ test/test_mips_cpu_bus.sh rtl addu
+addu_1 addu Pass
+addu_2 addu Pass
+If you were to replace bus with harvard then it should would instead test the harvard implementation.
+
+Your test-bench does not need to implement the instruction filter argument, and can choose to just run all test-cases every time it is run. However, you should be aware that if your test-bench locks up or otherwise aborts on one instruction, then it will appear as if all following instructions were never tested.
+
+The total simulation time for your entire test-bench should not exceed 10 minutes on a typical lap-top.
+
+Your test-bench should never modify anything located in the mips source directory. So it should not create any files in the source directory (e.g. rtl), and it definitely should not modify any of the files.
+
+Working and input directory
+To keep things simple, you can assume that your test-script will always be called from the base directory of your submission. This just means that your script is always invoked as test/test_mips_cpu_bus.sh.
+
+However, you should not assume anything about the directory containing the source MIPS. This could be a sub-directory of your project, or could be at some other relative or absolute path. For example, it might be invoked as:
+
+test/test_mips_cpu_bus.sh ../../reference_mips_cpu
+to get your testbench to execute against a reference CPU. Or it could be invoked as:
+
+test/test_mips_cpu_bus.sh /home/dt10/elec50010/cw/marking/team-23/rtl
+Either way, your test-bench just needs to compile the verilog files included in that

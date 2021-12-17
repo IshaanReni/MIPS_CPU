@@ -1,0 +1,5 @@
+addiu $2, $2, -8
+addiu $11, $11, 4
+divu $2, $11
+mflo $4
+jr $0

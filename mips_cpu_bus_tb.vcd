@@ -1,0 +1,451 @@
+$date
+	Thu Dec 16 10:57:04 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	10ps
+$end
+$scope module mips_cpu_bus_tb $end
+$var wire 1 ! write_cpu $end
+$var wire 1 " wait_r_o $end
+$var wire 32 # w_data [31:0] $end
+$var wire 32 $ reg_output [31:0] $end
+$var wire 1 % read_cpu $end
+$var wire 32 & r_data [31:0] $end
+$var wire 4 ' byte_en [3:0] $end
+$var wire 32 ( address [31:0] $end
+$var wire 1 ) active $end
+$var reg 1 * check_read $end
+$var reg 1 + check_write $end
+$var reg 1 , clk $end
+$var reg 1 - read_ram $end
+$var reg 1 . reset $end
+$var reg 1 / wait_r_i $end
+$var reg 1 0 write_ram $end
+$scope module cpuInst $end
+$var wire 1 , clk $end
+$var wire 1 . reset $end
+$var wire 32 1 writedata [31:0] $end
+$var wire 1 ! write $end
+$var wire 1 " waitrequest $end
+$var wire 32 2 register_v0 [31:0] $end
+$var wire 32 3 readdata [31:0] $end
+$var wire 1 % read $end
+$var wire 4 4 byteenable [3:0] $end
+$var wire 32 5 address [31:0] $end
+$var wire 1 ) active $end
+$var reg 32 6 instructions [31:0] $end
+$var reg 1 7 is_active $end
+$var reg 1 8 is_reset $end
+$var reg 32 9 read_mem [31:0] $end
+$scope module cpuCU $end
+$var wire 32 : LSIW [31:0] $end
+$var wire 1 . RESET $end
+$var wire 1 , clock $end
+$var wire 1 ; waitreqflag $end
+$var wire 1 " waitrequest $end
+$var wire 32 < regv0 [31:0] $end
+$var wire 1 = isLink $end
+$var wire 1 > isBranch $end
+$var wire 1 ? isArith $end
+$var wire 4 @ byteEnable [3:0] $end
+$var wire 1 A Z $end
+$var wire 1 B Rtype $end
+$var wire 32 C RtDATA [31:0] $end
+$var wire 32 D RsDATA [31:0] $end
+$var wire 32 E RdDATA [31:0] $end
+$var wire 5 F RT [4:0] $end
+$var wire 32 G RESULT [31:0] $end
+$var wire 32 H RAMDATA [31:0] $end
+$var wire 32 I PC [31:0] $end
+$var wire 1 J P $end
+$var wire 6 K OPCODE [5:0] $end
+$var wire 1 L NEQ $end
+$var wire 1 M N $end
+$var wire 32 N LSRAMIN [31:0] $end
+$var wire 32 O LSRAMADDR [31:0] $end
+$var wire 1 P Jtype $end
+$var wire 1 Q Itype $end
+$var wire 6 R FUNCCODE [5:0] $end
+$var wire 1 S FETCH $end
+$var wire 1 T EXEC2 $end
+$var wire 1 U EXEC1 $end
+$var wire 1 V EQ $end
+$var wire 1 W CONDITIONMET $end
+$var wire 1 ) ACTIVE $end
+$var reg 1 X HALT $end
+$var reg 32 Y IW [31:0] $end
+$var reg 32 Z LSRAMOUT [31:0] $end
+$var reg 32 [ LSRSDATA [31:0] $end
+$var reg 32 \ LSRTDATA [31:0] $end
+$var reg 32 ] OP1 [31:0] $end
+$var reg 32 ^ OP2 [31:0] $end
+$var reg 32 _ PCOffset [31:0] $end
+$var reg 32 ` RAMADDR [31:0] $end
+$var reg 32 a RAMOUT [31:0] $end
+$var reg 1 ! RAMWRITE $end
+$var reg 1 % RAMreadReq $end
+$var reg 5 b Rd [4:0] $end
+$var reg 5 c Rs [4:0] $end
+$var reg 5 d Rt [4:0] $end
+$var reg 5 e SHAMT [4:0] $end
+$var reg 1 f STALL $end
+$var reg 1 g WENREG $end
+$var reg 1 h delay_halt_1 $end
+$var reg 1 i delay_halt_2 $end
+$var reg 32 j delay_offset [31:0] $end
+$var reg 1 k isLoad $end
+$var reg 1 l isStore $end
+$var reg 32 m regData [31:0] $end
+$var reg 1 n signReqd $end
+$var reg 1 o updatePC $end
+$scope module cpuALU $end
+$var wire 1 . RESET $end
+$var wire 32 p a [31:0] $end
+$var wire 32 q b [31:0] $end
+$var wire 1 , clk $end
+$var wire 5 r shamt [4:0] $end
+$var wire 1 A zero $end
+$var wire 1 J pos $end
+$var wire 6 s opcode [5:0] $end
+$var wire 1 L neq $end
+$var wire 1 M neg $end
+$var wire 1 V eql $end
+$var wire 1 W comp_met $end
+$var wire 6 t compOp [5:0] $end
+$var wire 32 u compB [31:0] $end
+$var wire 32 v compA [31:0] $end
+$var wire 32 w alu_out [31:0] $end
+$var wire 32 x LO_o [31:0] $end
+$var wire 32 y LO [31:0] $end
+$var wire 32 z HI_o [31:0] $end
+$var wire 32 { HI [31:0] $end
+$var reg 32 | alu_in_a [31:0] $end
+$var reg 32 } alu_in_b [31:0] $end
+$var reg 6 ~ alu_opcode [5:0] $end
+$var reg 32 !" r [31:0] $end
+$scope module ALU $end
+$var wire 1 . RESET $end
+$var wire 32 "" a [31:0] $end
+$var wire 32 #" b [31:0] $end
+$var wire 6 $" opcode [5:0] $end
+$var wire 5 %" shamt [4:0] $end
+$var reg 32 &" HI [31:0] $end
+$var reg 32 '" LO [31:0] $end
+$var reg 64 (" product [63:0] $end
+$var reg 32 )" r [31:0] $end
+$upscope $end
+$scope module COMP $end
+$var wire 32 *" a [31:0] $end
+$var wire 32 +" b [31:0] $end
+$var wire 32 ," c_0 [31:0] $end
+$var wire 32 -" r [31:0] $end
+$var wire 1 A zero $end
+$var wire 1 J pos $end
+$var wire 1 L neq $end
+$var wire 1 M neg $end
+$var wire 1 V eql $end
+$var reg 32 ." acc [31:0] $end
+$var reg 32 /" aluA [31:0] $end
+$var reg 32 0" aluB [31:0] $end
+$var reg 1 W met $end
+$var reg 6 1" opcode [5:0] $end
+$upscope $end
+$scope module H_L $end
+$var wire 32 2" HI [31:0] $end
+$var wire 32 3" LO [31:0] $end
+$var wire 1 , clk $end
+$var reg 32 4" HI_out [31:0] $end
+$var reg 32 5" LO_out [31:0] $end
+$upscope $end
+$upscope $end
+$scope module cpuIR $end
+$var wire 32 6" IW [31:0] $end
+$var reg 1 V EQ $end
+$var reg 6 7" FUNCCODE [5:0] $end
+$var reg 1 Q Itype $end
+$var reg 1 P Jtype $end
+$var reg 1 M N $end
+$var reg 1 L NEQ $end
+$var reg 6 8" OPCODE [5:0] $end
+$var reg 1 J P $end
+$var reg 5 9" RT [4:0] $end
+$var reg 1 B Rtype $end
+$var reg 1 A Z $end
+$var reg 6 :" funccode [5:0] $end
+$var reg 1 ? isArith $end
+$var reg 1 > isBranch $end
+$var reg 1 = link $end
+$var reg 6 ;" opcode [5:0] $end
+$var reg 5 <" rt [4:0] $end
+$var reg 1 =" signReqd $end
+$upscope $end
+$scope module cpuLAS $end
+$var wire 32 >" instruction [31:0] $end
+$var wire 32 ?" mem_read [31:0] $end
+$var wire 32 @" reg_s [31:0] $end
+$var wire 32 A" reg_t [31:0] $end
+$var wire 3 B" opcode2 [2:0] $end
+$var wire 3 C" opcode1 [2:0] $end
+$var wire 16 D" offset [15:0] $end
+$var wire 32 E" l_extended_half [31:0] $end
+$var wire 32 F" l_extended_byte [31:0] $end
+$var wire 1 U cycle $end
+$var wire 32 G" a_extended_half [31:0] $end
+$var wire 32 H" a_extended_byte [31:0] $end
+$var reg 4 I" byteenable [3:0] $end
+$var reg 32 J" mem_address [31:0] $end
+$var reg 8 K" mem_byte [7:0] $end
+$var reg 16 L" mem_half [15:0] $end
+$var reg 32 M" mem_write [31:0] $end
+$var reg 1 N" read_enable $end
+$var reg 1 O" reg_enable $end
+$var reg 32 P" reg_write [31:0] $end
+$var reg 5 Q" reg_write_index [4:0] $end
+$var reg 1 R" u $end
+$var reg 1 S" write_enable $end
+$scope module b $end
+$var wire 8 T" a [7:0] $end
+$var wire 1 R" u $end
+$var wire 32 U" l_extended [31:0] $end
+$var wire 32 V" a_extended [31:0] $end
+$upscope $end
+$scope module h $end
+$var wire 16 W" a [15:0] $end
+$var wire 1 R" u $end
+$var wire 32 X" l_extended [31:0] $end
+$var wire 32 Y" a_extended [31:0] $end
+$upscope $end
+$upscope $end
+$scope module cpuPC $end
+$var wire 1 X HALT $end
+$var wire 32 Z" PCOffset [31:0] $end
+$var wire 1 . RESET $end
+$var wire 1 , clk $end
+$var wire 1 [" updatePC $end
+$var reg 32 \" PC [31:0] $end
+$var reg 32 ]" PCdelay [31:0] $end
+$upscope $end
+$scope module cpuRegFile $end
+$var wire 1 . RESET $end
+$var wire 5 ^" Rd [4:0] $end
+$var wire 32 _" RdDATA [31:0] $end
+$var wire 5 `" Rs [4:0] $end
+$var wire 5 a" Rt [4:0] $end
+$var wire 1 b" WENREG $end
+$var wire 1 , clk $end
+$var reg 32 c" RsDATA [31:0] $end
+$var reg 32 d" RtDATA [31:0] $end
+$var reg 32 e" register_v0 [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 f" i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module cpuSM $end
+$var wire 1 , clk $end
+$var wire 1 X halt $end
+$var wire 1 . reset $end
+$var wire 1 ; waitrequest $end
+$var reg 1 ) active $end
+$var reg 1 U e1 $end
+$var reg 1 T e2 $end
+$var reg 1 S f $end
+$var reg 3 g" state [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module ramInst $end
+$var wire 32 h" address [31:0] $end
+$var wire 4 i" byte_en [3:0] $end
+$var wire 1 , clk $end
+$var wire 1 / in_waitreq $end
+$var wire 1 - read $end
+$var wire 1 " waitreq $end
+$var wire 1 0 write $end
+$var wire 32 j" write_data [31:0] $end
+$var reg 32 k" mapped_address [31:0] $end
+$var reg 32 l" read_data [31:0] $end
+$scope begin $unm_blk_150 $end
+$var integer 32 m" i [31:0] $end
+$var integer 32 n" j [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#43000
+$dumpvars
+b100111010000100 n"
+b1001110001000000 m"
+b0 l"
+bx k"
+bx j"
+bx i"
+b0 h"
+b0 g"
+b100000 f"
+b0 e"
+b10101010101010100 d"
+b10101010101010100 c"
+xb"
+b0 a"
+b0 `"
+b10101010101010100 _"
+b0 ^"
+b0 ]"
+b0 \"
+x["
+b0 Z"
+b1111111111111111xxxxxxxxxxxxxxxx Y"
+b0xxxxxxxxxxxxxxxx X"
+bx W"
+b111111111111111111111111xxxxxxxx V"
+b0xxxxxxxx U"
+bx T"
+0S"
+xR"
+bx Q"
+bx P"
+xO"
+0N"
+bx M"
+bx L"
+bx K"
+bx J"
+bx I"
+b111111111111111111111111xxxxxxxx H"
+b1111111111111111xxxxxxxxxxxxxxxx G"
+b0xxxxxxxx F"
+b0xxxxxxxxxxxxxxxx E"
+b0 D"
+b0 C"
+b0 B"
+bx A"
+bx @"
+bx ?"
+b0 >"
+1="
+b0 <"
+b0 ;"
+b0 :"
+bx 9"
+b1001 8"
+b0 7"
+b0 6"
+b0 5"
+b0 4"
+b0 3"
+b0 2"
+bx 1"
+bx 0"
+bx /"
+bx ."
+bx -"
+b0 ,"
+bx +"
+bx *"
+bx )"
+bx ("
+b0 '"
+b0 &"
+b0 %"
+b1001 $"
+bx #"
+bx ""
+bx !"
+b1001 ~
+bx }
+bx |
+b0 {
+b0 z
+b0 y
+b0 x
+bx w
+bx v
+bx u
+bx t
+b1001 s
+b0 r
+bx q
+bx p
+1o
+xn
+b10101010101010100 m
+xl
+xk
+b0 j
+0i
+0h
+1g
+xf
+b0 e
+b0 d
+b0 c
+b0 b
+bx a
+b0 `
+b0 _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+b0 Y
+1X
+0W
+0V
+0U
+0T
+0S
+b0 R
+0Q
+0P
+bx O
+bx N
+0M
+0L
+b1001 K
+0J
+b0 I
+b0 H
+bx G
+bx F
+bx E
+b10101010101010100 D
+b10101010101010100 C
+1B
+0A
+bx @
+0?
+0>
+0=
+b0 <
+x;
+b0 :
+b0 9
+08
+07
+b0 6
+b0 5
+bx 4
+b0 3
+b0 2
+bx 1
+00
+x/
+0.
+1-
+1,
+x+
+x*
+0)
+b0 (
+bx '
+b0 &
+1%
+b0 $
+bx #
+x"
+0!
+$end

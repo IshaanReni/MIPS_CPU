@@ -1,0 +1,8 @@
+addiu $20, $0, -1000
+bltzal $20, 3
+addiu $3, $2, 10
+jr $0
+addiu $2, $3, 84
+jr $31
+addu $2, $2, $3
+jr $0

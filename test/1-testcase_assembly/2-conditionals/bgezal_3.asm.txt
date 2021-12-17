@@ -1,0 +1,7 @@
+addiu $8, $8, 0
+bgezal $8, 3
+addiu $8, $8, 64
+addiu $2, $8, 88
+addiu $2, $8, 32
+addu $2, $2, $8
+jr $0

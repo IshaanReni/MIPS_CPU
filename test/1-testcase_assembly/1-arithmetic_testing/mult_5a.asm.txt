@@ -1,0 +1,5 @@
+addiu $4, $0, 1
+subu $3, $3, $4
+mult $3, $3
+jr $0
+mflo $2

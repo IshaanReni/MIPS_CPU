@@ -1,0 +1,5 @@
+addiu $4, $0, 555
+addiu $4, $0, 555
+multu $4, $3
+jr $0
+mflo $2

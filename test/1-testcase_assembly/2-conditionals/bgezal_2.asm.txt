@@ -1,0 +1,7 @@
+addiu $5, $5, -70
+bgezal $5, 4
+addiu $2, $0, 70
+addiu $3, $2, 20
+addu $4, $2, $3
+addu $2, $3, $4
+jr $0

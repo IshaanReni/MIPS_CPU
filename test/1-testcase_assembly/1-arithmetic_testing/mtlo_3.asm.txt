@@ -1,0 +1,3 @@
+mtlo $3
+jr $0
+mflo $2
