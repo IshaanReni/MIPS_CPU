@@ -4,7 +4,7 @@ An implementation of a working synthesisable MIPS I ISA compatible CPU.
 # Project Overview
 The goal of this coursework was to develop a working, synthesizable, MIPS-compatible CPU that interfaced with the world using a memory-mapped bus. The emphasis was on producing a production-quality CPU with a robust testing process that can be sold and distributed to multiple clients, rather than a single circuit working in a single piece of hardware. 
 
-Further information regarding testing and specifications can be found on the [datasheet](*enter the link here*).
+Further information regarding testing and specifications can be found on the [datasheet](https://github.com/IshaanReni/MIPS_CPU/blob/main/Docs/mips_data_sheet.pdf).
 
 # Components
 - MIPS CPU Bus: This block is the main interface between the RAM and the rest of the CPU. It adheres to Avalon(R) specifications.
